@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-void: #05070c;
+  --color-abyss: #0a0e16;
+  --color-panel: #10151f;
+  --color-edge: #1c2534;
+  --color-mist: #8b98ab;
+  --color-chalk: #e6edf6;
+  --color-aqua: #45e0d0;
+  --color-aqua-dim: #1d7f76;
+  --color-amber: #f5b85c;
+  --color-rose: #ff6b81;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-void);
+  color: var(--color-chalk);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(69, 224, 208, 0.3);
+}
+
+.glass {
+  background: rgba(12, 17, 26, 0.82);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--color-edge);
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-edge) transparent;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(69, 224, 208, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(69, 224, 208, 0);
+  }
+}

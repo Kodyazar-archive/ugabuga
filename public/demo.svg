@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Animated water molecule demo">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#45e0d0" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#45e0d0" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#05070c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="oxygen" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ff8a9a"/>
+      <stop offset="45%" stop-color="#e0344c"/>
+      <stop offset="100%" stop-color="#8f1626"/>
+    </radialGradient>
+    <radialGradient id="hydrogen" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#c9d4e2"/>
+      <stop offset="100%" stop-color="#6b7a90"/>
+    </radialGradient>
+    <path id="orbitA" d="M 400 210 m -190 0 a 190 74 0 1 1 380 0 a 190 74 0 1 1 -380 0" fill="none"/>
+    <path id="orbitB" d="M 400 210 m -130 0 a 130 108 0 1 1 260 0 a 130 108 0 1 1 -260 0" fill="none"/>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="420" rx="24" fill="#05070c"/>
+  <rect x="0" y="0" width="800" height="420" rx="24" fill="url(#glow)"/>
+  <rect x="1" y="1" width="798" height="418" rx="23" fill="none" stroke="#1c2534" stroke-width="2"/>
+
+  <g fill="#e6edf6">
+    <circle cx="90" cy="70" r="1.6"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="90" r="2"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="4.1s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="340" r="1.4"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="2.7s" repeatCount="indefinite"/></circle>
+    <circle cx="650" cy="330" r="1.8"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="3.7s" repeatCount="indefinite"/></circle>
+    <circle cx="400" cy="52" r="1.5"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="250" cy="120" r="1.2"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="4.6s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="150" r="1.2"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <g fill="none" stroke="#45e0d0" stroke-width="1.4" opacity="0.35">
+    <ellipse cx="400" cy="210" rx="190" ry="74">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 210" to="360 400 210" dur="26s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="400" cy="210" rx="130" ry="108" stroke-dasharray="5 7">
+      <animateTransform attributeName="transform" type="rotate" from="360 400 210" to="0 400 210" dur="18s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <g fill="#45e0d0">
+    <circle r="5">
+      <animateMotion dur="6s" repeatCount="indefinite"><mpath xlink:href="#orbitA"/></animateMotion>
+    </circle>
+    <circle r="4">
+      <animateMotion dur="6s" begin="-3s" repeatCount="indefinite"><mpath xlink:href="#orbitA"/></animateMotion>
+    </circle>
+    <circle r="4.5" fill="#f5b85c">
+      <animateMotion dur="4.2s" repeatCount="indefinite"><mpath xlink:href="#orbitB"/></animateMotion>
+    </circle>
+  </g>
+
+  <circle cx="400" cy="210" r="46" fill="none" stroke="#45e0d0" stroke-width="1.5" opacity="0">
+    <animate attributeName="r" values="40;110" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -10; 0 0" keyTimes="0; 0.5; 1" dur="5s" repeatCount="indefinite"/>
+    <line x1="400" y1="210" x2="331" y2="289" stroke="#8b98ab" stroke-width="10" stroke-linecap="round"/>
+    <line x1="400" y1="210" x2="469" y2="289" stroke="#8b98ab" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="400" cy="210" r="42" fill="url(#oxygen)"/>
+    <circle cx="331" cy="289" r="24" fill="url(#hydrogen)"/>
+    <circle cx="469" cy="289" r="24" fill="url(#hydrogen)"/>
+    <text x="400" y="222" text-anchor="middle" font-family="monospace" font-size="26" font-weight="bold" fill="#05070c">O</text>
+    <text x="331" y="297" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#05070c">H</text>
+    <text x="469" y="297" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#05070c">H</text>
+  </g>
+
+  <text x="400" y="376" text-anchor="middle" font-family="monospace" font-size="17" letter-spacing="4" fill="#e6edf6">H2O · 104.5° · μ 0.48</text>
+  <text x="400" y="398" text-anchor="middle" font-family="monospace" font-size="11" letter-spacing="3" fill="#45e0d0">DRAG · BOND · INSPECT</text>
+</svg>
